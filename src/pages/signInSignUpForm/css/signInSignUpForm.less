@@ -10,17 +10,69 @@
     min-height: 100vh;
     background-color: #fff;
     overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 2000px;
+        height: 2000px;
+        border-radius: 50%;
+        background-image: linear-gradient(-45deg, #4481eb, #04befe);
+        top: -10%;
+        right: 48%;
+        transform: translateY(-50%);
+    }
+    .forms-container, .panels-container {
+        .btn {
+            width: 150px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: #5995fd;
+            border-radius: 40px;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 10px 0;
+            transition: .5s;
+            &:hover {
+                background-color: #4d84e2;
+            }
+        }
+    }
     .forms-container {
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
+        
+        .signin-signup {
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
         form {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            overflow: hidden;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            &.sign-in-form {
+                z-index: 2;
+            }
+            &.sign-up-form {
+                z-index: 1;
+                opacity: 0;
+            }
             .title {
                 font-size: 2.2rem;
                 color: #444;
@@ -57,24 +109,7 @@
                     }
                 }
             }
-            .btn {
-                width: 150px;
-                height: 40px;
-                border: none;
-                outline: none;
-                background-color: #5995fd;
-                border-radius: 40px;
-                cursor: pointer;
-                color: #fff;
-                text-align: center;
-                text-transform: uppercase;
-                font-weight: 600;
-                margin: 10px 0;
-                transition: .5s;
-                &:hover {
-                    background-color: #4d84e2;
-                }
-            }
+            
             .social-text {
                 padding: .7rem 0;
                 font-size: 1rem;
