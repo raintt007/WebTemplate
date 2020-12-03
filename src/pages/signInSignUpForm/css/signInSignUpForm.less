@@ -1,0 +1,106 @@
+
+@import "@/common/css/common.css";
+
+* {
+    box-sizing: border-box;
+}
+.signInSignUpForm-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+    .forms-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .title {
+                font-size: 2.2rem;
+                color: #444;
+                margin-bottom: 10px;
+            }
+            .input-field {
+                max-width: 375px;
+                width: 100%;
+                height: 55px;
+                background-color: #f0f0f0;
+                margin: 10px 0;
+                border-radius: 55px;
+                display: grid;
+                grid-template-columns: 15% 85%;
+                padding: 0 .4rem;
+                i {
+                    text-align: center;
+                    line-height: 55px;
+                    color: #acacac;
+                    font-size: 1.1rem;
+                    color: #333;
+                }
+                input {
+                    background: none;
+                    outline: none;
+                    border: none;
+                    line-height: 1;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    color:#333;
+                    &::placeholder {
+                        color: #aaa;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .btn {
+                width: 150px;
+                height: 40px;
+                border: none;
+                outline: none;
+                background-color: #5995fd;
+                border-radius: 40px;
+                cursor: pointer;
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin: 10px 0;
+                transition: .5s;
+                &:hover {
+                    background-color: #4d84e2;
+                }
+            }
+            .social-text {
+                padding: .7rem 0;
+                font-size: 1rem;
+            }
+            .social-media {
+                display: flex;
+                justify-content: center;
+            }
+            .social-icon {
+                height: 46px;
+                width: 46px;
+                margin: 0 .45rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 1px solid #333;
+                font-size: 1.1rem;
+                transition: .3s;
+                &:hover {
+                    color: #4481eb;
+                    border-color: #4481eb;
+                }
+            }
+        }
+        
+    }
+    
+}
