@@ -1,0 +1,78 @@
+
+@import "@/common/css/common.css";
+@keyframes roundRule{
+    0%, 100%{
+      -webkit-transform: rotate(-5deg);
+    }
+    50%{
+      -webkit-transform: rotate(5deg);
+    }
+  }
+.hongbao-wrapper {
+    margin: auto;
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    .top {
+        transform-origin: center top;
+        transition: 1s all ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        z-index: 4;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 300px;
+            height: 50px;
+            position: absolute;
+            top: 0px;
+            background-color:orange;
+            z-index: 2;
+        }
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50px;
+            border: 150px solid transparent;
+            border-top-color: orange;
+            z-index: 1;
+        }
+        .icon {
+            display: inline-block;
+            border-radius: 50%;
+            background-color: yellow;
+            position: absolute;
+            z-index: 2;
+            bottom: 0;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+
+        }
+    }
+    .body {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        right: 10px;
+        bottom: 0;
+        z-index: 3;
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid yellow;
+        background-color: red;
+    }
+}
