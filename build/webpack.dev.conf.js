@@ -71,7 +71,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
                         options: {importLoaders: 1}
                     },
                     'postcss-loader',
-                    'less-loader'
+                    'less-loader',
+                ]
+            }, {
+                test: /\.jpg|\.png$/,
+                use: [
+                    'file-loader'
                 ]
             }
         ]
