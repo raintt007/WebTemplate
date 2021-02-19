@@ -1,5 +1,14 @@
-
 @import "@/common/css/common.css";
 .helloWorld-wrapper {
-    text-align: center;
+    @colorMain: #673ab7;
+    .bg {
+        margin: 100px auto;
+        width: 200px;
+        height: 200px;
+        background: 
+        repeating-linear-gradient(0, @colorMain 0, @colorMain 3px, transparent 3px, transparent 10px),
+        repeating-linear-gradient(60deg, @colorMain 0, @colorMain 3px, transparent 3px, transparent 10px),
+        repeating-linear-gradient(-60deg, @colorMain 0, @colorMain 3px, transparent 3px, transparent 10px);
+    }
+
 }

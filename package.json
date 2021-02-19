@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "testPromise": "promises-aplus-tests src/pages/helloWorld/js/helloWorld.js",
     "dev": "webpack serve --inline --progress --config build/webpack.dev.conf.js",
     "page": "node build/page.js",
     "build": "webpack --mode production"
@@ -53,5 +54,8 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-dists-loader": "^1.2.7",
     "webpack-merge": "^5.4.0"
+  },
+  "dependencies": {
+    "promises-aplus-tests": "^2.1.2"
   }
 }
