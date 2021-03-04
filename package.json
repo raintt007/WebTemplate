@@ -55,5 +55,8 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-dists-loader": "^1.2.7",
     "webpack-merge": "^5.4.0"
+  },
+  "dependencies": {
+    "list-diff2": "^0.1.4"
   }
 }
