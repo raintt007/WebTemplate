@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>镂空测试</title>
-    <style>
-        body{
-            height:100%;
-            width: 100%;
-            background: black;
-            background-size: cover;
-        }
-        .outer{
-            position: relative;
-            height:300px;
-            width:300px;
-            background: transparent;
-            overflow: hidden;
-        }
-        .inner{
-            position: absolute;
-            right: -50px;
-            top: 100px;
-            width: 100px;
-            height: 100px;
-            border-radius: 100px;
-            box-shadow: rgba(255,255,255,1) 0 0 0 2017px;
-            z-index: 100;
-        }
-    </style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>镂空测试</title>
+        <style>
+            body {
+                height: 100%;
+                width: 100%;
+                background: black;
+                background-size: cover;
+            }
+            .outer {
+                position: relative;
+                height: 300px;
+                width: 300px;
+                background: transparent;
+                overflow: hidden;
+            }
+            .inner {
+                position: absolute;
+                right: -50px;
+                top: 100px;
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                box-shadow: rgba(255, 255, 255, 1) 0 0 0 2017px;
+                z-index: 100;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="inner"></div>
+        </div>
 
-<div class="outer">
-    <div class="inner"></div>
-</div>
-
-
-</body>
+        <script>
+            function test(res) {
+                console.log(res);
+            }
+        </script>
+    </body>
 </html>
