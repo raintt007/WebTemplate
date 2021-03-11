@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" a-model="name" />
+      <p>{{name}}</p>
+      <p>{{name}}</p>
+    </div>
+  </body>
+</html>
+<script src="./js/Dep.js"></script>
+<script src="./js/Watcher.js"></script>
+<script src="./js/AVue.js"></script>
+<script src="./js/Compiler.js"></script>
+<script>
+  //一个key对应一个dep  多个插值表达式
+  let app = new AVue({
+    el: "#app",
+    data: {
+      name: "测试",
+      a: 1,
+    }
+  });
+  console.log(app);
+</script>
