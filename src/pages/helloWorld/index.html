@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>事件冒泡</title>
+    <style>
+        .master {
+            width: 500px;
+            display: flex;
+            /* flex-wrap: wrap; */
+            /* justify-content: space-around; */
+        }
+        .tt {
+            display: flex;
+            flex: 1 1 200px;
+            background-color: red;
+            margin-right: 10px;
+            /* overflow: hidden; */
+        }
+    </style>
 </head>
 <body>
-    <div>
-        
+    <div class="master">
+        <div class="tt">1</div>
+        <div class="tt">123123</div>
+        <input type="text" class="throttle" />
     </div>
 </body>
 </html>
